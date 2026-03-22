@@ -134,7 +134,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             {/* Slide content */}
-            <div className="relative flex h-full w-full items-center justify-center px-16 py-20">
+            <div className="relative flex h-full w-full items-center justify-center px-14 pt-14 pb-16">
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={currentIndex}
@@ -150,25 +150,25 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="flex h-full w-full items-center justify-center"
                 >
                   {!isVideoSlide ? (
-                    <div className="relative h-full w-full max-w-6xl rounded-lg overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] ring-1 ring-white/10">
+                    <div className="relative h-full w-full overflow-hidden rounded-md shadow-[0_8px_40px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.08]">
                       <Image
                         src={`/images/${project.slug}/${(currentIndex + 1).toString().padStart(2, "0")}.png`}
                         alt={`${project.title} - page ${currentIndex + 1}`}
                         fill
-                        className="object-contain bg-bg-secondary"
+                        className="object-contain"
                         quality={90}
                         priority
                       />
                     </div>
                   ) : (
-                    <div className="w-full max-w-4xl">
+                    <div className="w-full max-w-5xl">
                       <p
                         className="text-xs tracking-[3px] uppercase text-center mb-6"
                         style={{ color: project.color }}
                       >
                         Video {videoCount > 1 ? videoIndex + 1 : ""}
                       </p>
-                      <div className="rounded-lg overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] ring-1 ring-white/10">
+                      <div className="rounded-md overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.08]">
                         <YouTubeEmbed
                           url={project.videos[videoIndex]}
                           title={`${project.title} 영상 ${videoIndex + 1}`}
