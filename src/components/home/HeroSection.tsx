@@ -94,7 +94,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["경", "험"].includes(char)
-                        ? "text-teal-accent font-light"
+                        ? "text-teal-accent font-semibold"
                         : ""
                     }`}
                   >
@@ -116,7 +116,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["문", "제", "발", "견", "해", "결"].includes(char)
-                        ? "text-teal-accent font-light"
+                        ? "text-teal-accent font-semibold"
                         : ""
                     }`}
                   >
