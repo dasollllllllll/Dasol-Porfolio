@@ -1,23 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-interface FloatingElementProps {
-  count?: number;
+interface FloatingElement {
+  id: number;
+  size: number;
+  x: number;
+  y: number;
+  duration: number;
+  delay: number;
 }
 
-export function FloatingElements({ count = 5 }: FloatingElementProps) {
-  const [elements] = useState(() =>
-    Array.from({ length: count }, (_, i) => ({
-      id: i,
-      size: 40 + Math.random() * 80,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      duration: 15 + Math.random() * 20,
-      delay: Math.random() * 5,
-    }))
-  );
+export function FloatingElements({ count = 5 }: { count?: number }) {
+  const [elements, setElements] = useState<FloatingElement[]>([]);
+
+  useEffect(() => {
+    setElements(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        size: 40 + Math.random() * 80,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        duration: 15 + Math.random() * 20,
+        delay: Math.random() * 5,
+      }))
+    );
+  }, [count]);
+
+  if (elements.length === 0) return null;
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">

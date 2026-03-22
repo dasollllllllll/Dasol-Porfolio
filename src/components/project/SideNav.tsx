@@ -18,7 +18,7 @@ export function SideNav({
   };
 
   return (
-    <nav className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 lg:flex flex-col gap-3">
+    <nav className="fixed right-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-4 xl:flex">
       {sections.map((section) => (
         <button
           key={section.id}
@@ -27,19 +27,19 @@ export function SideNav({
           title={section.label}
         >
           <span
-            className="text-xs opacity-0 transition-opacity group-hover:opacity-100 text-right"
-            style={{ color: activeId === section.id ? color : undefined }}
+            className="text-[11px] opacity-0 transition-all duration-200 group-hover:opacity-100 whitespace-nowrap"
+            style={{ color: activeId === section.id ? color : "rgba(255,255,255,0.5)" }}
           >
             {section.label}
           </span>
-          <div
-            className="h-2 w-2 rounded-full transition-all"
+          <span
+            className="block h-2 w-2 rounded-full shrink-0 transition-all duration-200"
             style={{
               background:
                 activeId === section.id ? color : "rgba(255,255,255,0.2)",
               boxShadow:
-                activeId === section.id ? `0 0 10px ${color}50` : "none",
-              transform: activeId === section.id ? "scale(1.3)" : "scale(1)",
+                activeId === section.id ? `0 0 8px ${color}60` : "none",
+              transform: activeId === section.id ? "scale(1.4)" : "scale(1)",
             }}
           />
         </button>

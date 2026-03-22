@@ -17,6 +17,8 @@ export interface Project {
   tags: string[];
   color: string;
   videos: string[];
+  images: number;
+  thumbnail?: string;
   sections: ProjectSection[];
 }
 
@@ -33,6 +35,8 @@ export const projects: Project[] = [
       "https://www.youtube.com/watch?v=YlP94fvTRbg",
       "https://www.youtube.com/watch?v=O43sf9ZHGL8",
     ],
+    images: 7,
+    thumbnail: "/images/curiocity/thumbnail.jpg",
     sections: [
       {
         id: "problem",
@@ -117,6 +121,8 @@ export const projects: Project[] = [
     tags: ["Data Visualization", "3D", "Urban Infrastructure"],
     color: "#3b82f6",
     videos: [],
+    images: 5,
+    thumbnail: "/images/grounded/thumbnail.png",
     sections: [
       {
         id: "problem",
@@ -190,6 +196,7 @@ export const projects: Project[] = [
     tags: ["HCI", "VR", "Emotion Flow"],
     color: "#8b5cf6",
     videos: ["https://www.youtube.com/watch?v=NPYDC7MvH30"],
+    images: 2,
     sections: [
       {
         id: "challenge",

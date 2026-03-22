@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import Image from "next/image";
 import { projects, getProject, getAdjacentProjects } from "@/data/projects";
 import { ProjectHero } from "@/components/project/ProjectHero";
-import { ProjectSection } from "@/components/project/ProjectSection";
-import { SideNav } from "@/components/project/SideNav";
 import { YouTubeEmbed } from "@/components/project/YouTubeEmbed";
 import { ProjectNav } from "@/components/project/ProjectNav";
 
@@ -40,23 +39,35 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   const { prev, next } = getAdjacentProjects(slug);
+  const imageNumbers = Array.from({ length: project.images }, (_, i) => i + 1);
 
   return (
     <main className="pt-16">
       <ProjectHero project={project} />
-      <SideNav sections={project.sections} color={project.color} />
 
-      {project.sections.map((section) => (
-        <ProjectSection
-          key={section.id}
-          section={section}
-          color={project.color}
-        />
-      ))}
+      {/* PDF 페이지 이미지 */}
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-4 space-y-2">
+          {imageNumbers.map((num) => (
+            <div key={num} className="relative w-full overflow-hidden rounded-lg">
+              <Image
+                src={`/images/${project.slug}/${num.toString().padStart(2, "0")}.png`}
+                alt={`${project.title} - page ${num}`}
+                width={1920}
+                height={1080}
+                className="w-full h-auto"
+                quality={90}
+                priority={num <= 2}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
+      {/* YouTube 영상 */}
       {project.videos.length > 0 && (
-        <section className="py-24">
-          <div className="mx-auto max-w-4xl px-6 space-y-6">
+        <section className="py-16">
+          <div className="mx-auto max-w-5xl px-4 space-y-6">
             <p
               className="text-xs tracking-[3px] uppercase mb-8"
               style={{ color: project.color }}
