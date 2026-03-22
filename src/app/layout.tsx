@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { LenisProvider } from "@/lib/lenis";
+import { MotionProvider } from "@/lib/motion-provider";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const pretendard = localFont({
   src: [
@@ -32,7 +36,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={pretendard.variable}>
-      <body className="font-pretendard antialiased">{children}</body>
+      <body className="font-pretendard antialiased">
+        <MotionProvider>
+          <LenisProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </LenisProvider>
+        </MotionProvider>
+      </body>
     </html>
   );
 }
