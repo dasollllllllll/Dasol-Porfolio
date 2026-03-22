@@ -39,9 +39,9 @@ export function ContactSection() {
           className="mb-20"
         >
           <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-extralight leading-[1.15] tracking-tight">
-            함께 <span className="text-active-blue">일하고</span> 싶으시다면
+            함께 <span className="text-teal-accent font-semibold">일하고</span> 싶으시다면
             <br />
-            편하게 <span className="text-active-blue">연락</span>주세요
+            편하게 <span className="text-teal-accent font-semibold">연락</span>주세요
           </h2>
         </motion.div>
 
