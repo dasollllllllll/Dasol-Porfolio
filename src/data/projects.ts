@@ -197,6 +197,7 @@ export const projects: Project[] = [
     color: "#8b5cf6",
     videos: ["https://www.youtube.com/watch?v=NPYDC7MvH30"],
     images: 2,
+    thumbnail: "/images/hci/thumbnail.png",
     sections: [
       {
         id: "challenge",
