@@ -70,7 +70,7 @@ export function AboutSection() {
               <span className="text-[10px] tracking-widest text-teal-accent/40">
                 {step.num}
               </span>
-              <h3 className="text-lg font-light text-text-primary transition-colors group-hover:text-white">
+              <h3 className="text-lg font-light text-text-primary transition-colors group-hover:text-teal-accent">
                 {step.title}
               </h3>
               <p className="text-xs text-text-muted">{step.desc}</p>

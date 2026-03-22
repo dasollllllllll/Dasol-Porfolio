@@ -22,7 +22,7 @@ export function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-screen items-end overflow-hidden pb-20 md:pb-28"
+      className="relative flex min-h-[85vh] items-end overflow-hidden pb-16 md:pb-24"
     >
       <MouseGlow />
 
@@ -94,7 +94,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["경", "험"].includes(char)
-                        ? "text-active-blue font-light"
+                        ? "text-teal-accent font-light"
                         : ""
                     }`}
                   >
@@ -116,7 +116,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["문", "제", "발", "견", "해", "결"].includes(char)
-                        ? "text-active-blue font-light"
+                        ? "text-teal-accent font-light"
                         : ""
                     }`}
                   >
