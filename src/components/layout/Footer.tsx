@@ -1,10 +1,18 @@
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8">
-      <div className="mx-auto max-w-6xl px-6 text-center">
-        <p className="text-sm text-text-muted">
-          © 2026 Dasol Park. All rights reserved.
+    <footer className="border-t border-white/[0.04] py-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
+        <p className="text-xs text-text-muted tracking-wider">
+          © 2026 Dasol Park
         </p>
+        <a
+          href="https://www.instagram.com/sol_.tudio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-text-muted tracking-wider transition-colors hover:text-teal-accent"
+        >
+          Instagram
+        </a>
       </div>
     </footer>
   );

@@ -1,42 +1,94 @@
 "use client";
 
-import { AnimatedText } from "@/components/ui/AnimatedText";
+import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative py-32">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <AnimatedText>
-          <p className="text-sm text-teal-accent tracking-widest mb-6">
-            Thank you for reviewing my portfolio
-          </p>
-        </AnimatedText>
+    <section id="contact" className="relative py-32 md:py-40">
+      <div className="mx-auto max-w-7xl px-6 md:px-12">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="mb-20 flex items-center gap-4"
+        >
+          <span className="text-xs tracking-[3px] text-teal-accent uppercase">
+            /03
+          </span>
+          <div className="h-px w-8 bg-teal-accent/30" />
+          <span className="text-xs tracking-[3px] text-text-muted uppercase">
+            Contact
+          </span>
+        </motion.div>
 
-        <AnimatedText delay={0.1}>
-          <h2 className="text-2xl font-light leading-relaxed md:text-3xl">
-            사용자가 복잡한 시스템을 직관적으로{" "}
-            <span className="text-teal-accent">이해</span>하고
-            <br />
-            자연스럽게 <span className="text-teal-accent">행동</span>할 수 있도록{" "}
-            <span className="text-teal-accent">UX 구조를 설계</span>합니다
-          </h2>
-        </AnimatedText>
-
-        <AnimatedText delay={0.2}>
-          <div className="mt-12 flex flex-col items-center gap-4">
-            <p className="text-text-secondary">
-              Name <span className="ml-2 text-text-primary">박다솔</span>
+        <div className="grid gap-16 md:grid-cols-2">
+          {/* Left: message */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-extralight leading-snug md:text-5xl">
+              함께 일하고 싶으시다면
+              <br />
+              <span className="text-teal-accent">연락</span>주세요
+            </h2>
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-text-secondary">
+              사용자가 복잡한 시스템을 직관적으로 이해하고
+              자연스럽게 행동할 수 있도록 UX 구조를 설계합니다
             </p>
-            {/* TODO: 실제 이메일 주소로 교체 필요 */}
-            <a
-              href="mailto:contact@example.com"
-              className="text-teal-accent hover:underline transition-colors"
-            >
-              contact@example.com
-            </a>
-            {/* TODO: 링크드인 URL 추가 필요 */}
-          </div>
-        </AnimatedText>
+          </motion.div>
+
+          {/* Right: contact info */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col justify-center gap-8"
+          >
+            <div className="space-y-6">
+              <div className="group">
+                <p className="mb-1 text-xs tracking-widest text-text-muted uppercase">
+                  Name
+                </p>
+                <p className="text-lg font-light">박다솔</p>
+              </div>
+
+              <div className="h-px bg-white/[0.06]" />
+
+              <div className="group">
+                <p className="mb-1 text-xs tracking-widest text-text-muted uppercase">
+                  Email
+                </p>
+                {/* TODO: 실제 이메일 주소로 교체 */}
+                <a
+                  href="mailto:contact@example.com"
+                  className="text-lg font-light text-text-primary transition-colors hover:text-teal-accent"
+                >
+                  contact@example.com
+                </a>
+              </div>
+
+              <div className="h-px bg-white/[0.06]" />
+
+              <div className="group">
+                <p className="mb-1 text-xs tracking-widest text-text-muted uppercase">
+                  Instagram
+                </p>
+                <a
+                  href="https://www.instagram.com/sol_.tudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-light text-text-primary transition-colors hover:text-teal-accent"
+                >
+                  @sol_.tudio
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
