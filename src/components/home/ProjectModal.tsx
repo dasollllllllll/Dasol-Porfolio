@@ -93,7 +93,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/92 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-white/95 backdrop-blur-md"
           onClick={onClose}
         >
           <motion.div
@@ -106,7 +106,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-6 py-4 bg-gradient-to-b from-black/60 to-transparent">
+            <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-6 py-4 bg-gradient-to-b from-white/80 to-transparent">
               <div className="flex items-center gap-3">
                 <span
                   className="text-xs tracking-[3px] uppercase"
@@ -125,7 +125,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </span>
                 <button
                   onClick={onClose}
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-black/60 hover:bg-black/10 transition-colors"
                   aria-label="Close"
                 >
                   ✕
@@ -162,7 +162,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     </div>
                   ) : (
                     <div className="w-full max-w-5xl">
-                      <p className="text-xs tracking-[3px] uppercase text-center mb-6 text-white/40">
+                      <p className="text-xs tracking-[3px] uppercase text-center mb-6 text-black/30">
                         Video {videoCount > 1 ? videoIndex + 1 : ""}
                       </p>
                       <YouTubeEmbed
@@ -179,7 +179,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {currentIndex > 0 && (
               <button
                 onClick={goPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white text-xl hover:bg-white/20 hover:scale-110 transition-all"
+                className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-black/50 text-xl hover:bg-white/20 hover:scale-110 transition-all"
                 aria-label="Previous"
               >
                 ←
@@ -188,7 +188,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {currentIndex < totalSlides - 1 && (
               <button
                 onClick={goNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white text-xl hover:bg-white/20 hover:scale-110 transition-all"
+                className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-black/50 text-xl hover:bg-white/20 hover:scale-110 transition-all"
                 aria-label="Next"
               >
                 →
@@ -215,7 +215,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       background:
                         currentIndex === i
                           ? project.color
-                          : "rgba(255,255,255,0.25)",
+                          : "rgba(0,0,0,0.12)",
                     }}
                   />
                 </button>
