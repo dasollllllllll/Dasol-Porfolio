@@ -23,7 +23,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="mb-6 flex items-center gap-4"
             >
-              <span className="text-xs tracking-[3px] text-white/30 uppercase">
+              <span className="text-xs tracking-[3px] text-black/25 uppercase">
                 /01
               </span>
               <div className="h-px w-8 bg-white/10" />
@@ -57,7 +57,7 @@ export function AboutSection() {
         </div>
 
         {/* Process steps */}
-        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.03] md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-black/[0.06] bg-white/60 md:grid-cols-5">
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
@@ -65,9 +65,9 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative flex flex-col gap-4 border-b border-white/[0.06] p-8 transition-colors hover:bg-white/[0.03] md:border-b-0 md:border-r last:border-r-0 last:border-b-0"
+              className="group relative flex flex-col gap-4 border-b border-black/[0.06] p-8 transition-colors hover:bg-white/60 md:border-b-0 md:border-r last:border-r-0 last:border-b-0"
             >
-              <span className="text-[10px] tracking-widest text-white/20">
+              <span className="text-[10px] tracking-widest text-teal-accent/40">
                 {step.num}
               </span>
               <h3 className="text-lg font-light text-text-primary transition-colors group-hover:text-white">

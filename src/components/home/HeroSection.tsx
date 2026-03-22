@@ -31,7 +31,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
@@ -39,11 +39,11 @@ export function HeroSection() {
       {/* Multiple gradient orbs */}
       <motion.div
         style={{ y: y1 }}
-        className="pointer-events-none absolute -top-20 right-[10%] h-[500px] w-[500px] rounded-full bg-white/[0.03] blur-[150px]"
+        className="pointer-events-none absolute -top-20 right-[10%] h-[500px] w-[500px] rounded-full bg-active-blue/[0.05] blur-[150px]"
       />
       <motion.div
         style={{ y: y2 }}
-        className="pointer-events-none absolute top-[40%] left-[5%] h-[300px] w-[300px] rounded-full bg-purple-500/[0.04] blur-[120px]"
+        className="pointer-events-none absolute top-[40%] left-[5%] h-[300px] w-[300px] rounded-full bg-teal-accent/[0.03] blur-[120px]"
       />
 
       {/* Large background number */}
@@ -51,7 +51,7 @@ export function HeroSection() {
         style={{ y: y1, opacity }}
         className="pointer-events-none absolute right-[5%] top-[15%] select-none"
       >
-        <span className="text-[20vw] font-extralight leading-none text-white/[0.02]">
+        <span className="text-[20vw] font-extralight leading-none text-black/[0.03]">
           UX
         </span>
       </motion.div>
@@ -69,9 +69,9 @@ export function HeroSection() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="h-px w-16 origin-left bg-white/20"
+              className="h-px w-16 origin-left bg-teal-accent/20"
             />
-            <span className="text-xs tracking-[6px] text-white/40 uppercase">
+            <span className="text-xs tracking-[6px] text-teal-accent/50 uppercase">
               UX/UI Designer — Portfolio 2026
             </span>
           </motion.div>
@@ -94,7 +94,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["경", "험"].includes(char)
-                        ? "text-teal-accent/80 font-light"
+                        ? "text-active-blue font-light"
                         : ""
                     }`}
                   >
@@ -116,7 +116,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["문", "제", "발", "견", "해", "결"].includes(char)
-                        ? "text-teal-accent/80 font-light"
+                        ? "text-active-blue font-light"
                         : ""
                     }`}
                   >
@@ -141,7 +141,7 @@ export function HeroSection() {
             </p>
 
             <div className="flex items-center gap-4">
-              <div className="h-px w-8 bg-white/10" />
+              <div className="h-px w-8 bg-black/5" />
               <span className="text-xs tracking-[2px] text-text-muted uppercase">
                 박다솔 — Product Designer
               </span>
@@ -165,7 +165,7 @@ export function HeroSection() {
           <span className="text-[10px] tracking-[3px] text-text-muted uppercase">
             Scroll
           </span>
-          <div className="h-12 w-px bg-gradient-to-b from-white/20 to-transparent" />
+          <div className="h-12 w-px bg-gradient-to-b from-teal-accent/30 to-transparent" />
         </motion.div>
       </motion.div>
     </section>

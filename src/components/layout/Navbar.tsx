@@ -41,7 +41,7 @@ export function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-bg-primary/70 backdrop-blur-xl border-b border-white/[0.04]"
+            ? "bg-bg-primary/80 backdrop-blur-xl border-b border-black/[0.06]"
             : "bg-transparent"
         }`}
       >
@@ -104,7 +104,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-bg-primary/98 backdrop-blur-xl"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-bg-primary/95 backdrop-blur-xl"
           >
             {isHome &&
               navItems.map((item, i) => (

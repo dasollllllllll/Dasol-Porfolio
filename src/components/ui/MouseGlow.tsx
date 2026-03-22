@@ -16,7 +16,7 @@ export function MouseGlow() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed z-30 h-[400px] w-[400px] rounded-full bg-teal-accent/5 blur-[100px]"
+      className="pointer-events-none fixed z-30 h-[400px] w-[400px] rounded-full bg-active-blue/[0.04] blur-[120px]"
       animate={{ x: x - 200, y: y - 200 }}
       transition={{ type: "spring", damping: 30, stiffness: 200 }}
     />

@@ -62,7 +62,7 @@ function ProjectCard({
             <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-500 group-hover:opacity-100">
               <motion.span
                 initial={false}
-                className="rounded-full border border-white/40 bg-black/30 px-8 py-3 text-sm tracking-wider text-white backdrop-blur-md"
+                className="rounded-full border border-white/60 bg-black/30 px-8 py-3 text-sm tracking-wider text-white backdrop-blur-md"
               >
                 View Project →
               </motion.span>
@@ -132,7 +132,7 @@ function ProjectCard({
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/[0.06] px-3 py-1 text-[11px] text-text-muted transition-colors group-hover:border-white/[0.12]"
+                  className="rounded-full border border-black/[0.06] px-3 py-1 text-[11px] text-text-muted transition-colors group-hover:border-black/[0.12]"
                 >
                   {tag}
                 </span>
@@ -149,7 +149,7 @@ function ProjectCard({
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="mt-24 h-px origin-left bg-gradient-to-r from-white/[0.06] via-white/[0.03] to-transparent"
+          className="mt-24 h-px origin-left bg-gradient-to-r from-black/[0.06] via-black/[0.03] to-transparent"
         />
       )}
     </motion.div>
@@ -169,10 +169,10 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="mb-24 flex items-center gap-4"
         >
-          <span className="text-xs tracking-[3px] text-white/30 uppercase">
+          <span className="text-xs tracking-[3px] text-black/25 uppercase">
             /02
           </span>
-          <div className="h-px w-8 bg-white/10" />
+          <div className="h-px w-8 bg-black/5" />
           <span className="text-xs tracking-[3px] text-text-muted uppercase">
             Selected Work
           </span>
@@ -182,13 +182,13 @@ export function ProjectsSection() {
         <div className="mb-20 overflow-hidden">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             className="flex whitespace-nowrap"
           >
             {[...Array(2)].map((_, i) => (
               <span
                 key={i}
-                className="mr-8 text-[clamp(3rem,8vw,7rem)] font-extralight tracking-tight text-white/[0.03]"
+                className="mr-8 text-[clamp(3rem,8vw,7rem)] font-extralight tracking-tight text-black/[0.04]"
               >
                 CurioCity — GROUNDED — HCI — CurioCity — GROUNDED — HCI —{" "}
               </span>
