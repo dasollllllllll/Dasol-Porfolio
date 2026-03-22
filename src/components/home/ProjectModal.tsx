@@ -110,7 +110,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <div className="flex items-center gap-3">
                 <span
                   className="text-xs tracking-[3px] uppercase"
-                  style={{ color: project.color }}
+                  style={{ color: `${project.color}99` }}
                 >
                   {project.number}
                 </span>
@@ -150,7 +150,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="flex h-full w-full items-center justify-center"
                 >
                   {!isVideoSlide ? (
-                    <div className="relative h-full w-full overflow-hidden rounded-md shadow-[0_8px_40px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.08]">
+                    <div className="relative h-full w-full">
                       <Image
                         src={`/images/${project.slug}/${(currentIndex + 1).toString().padStart(2, "0")}.png`}
                         alt={`${project.title} - page ${currentIndex + 1}`}
@@ -162,18 +162,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     </div>
                   ) : (
                     <div className="w-full max-w-5xl">
-                      <p
-                        className="text-xs tracking-[3px] uppercase text-center mb-6"
-                        style={{ color: project.color }}
-                      >
+                      <p className="text-xs tracking-[3px] uppercase text-center mb-6 text-white/40">
                         Video {videoCount > 1 ? videoIndex + 1 : ""}
                       </p>
-                      <div className="rounded-md overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.08]">
-                        <YouTubeEmbed
-                          url={project.videos[videoIndex]}
-                          title={`${project.title} 영상 ${videoIndex + 1}`}
-                        />
-                      </div>
+                      <YouTubeEmbed
+                        url={project.videos[videoIndex]}
+                        title={`${project.title} 영상 ${videoIndex + 1}`}
+                      />
                     </div>
                   )}
                 </motion.div>

@@ -22,10 +22,10 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="mb-20 flex items-center gap-4"
         >
-          <span className="text-xs tracking-[3px] text-teal-accent uppercase">
+          <span className="text-xs tracking-[3px] text-white/30 uppercase">
             /03
           </span>
-          <div className="h-px w-8 bg-teal-accent/30" />
+          <div className="h-px w-8 bg-white/10" />
           <span className="text-xs tracking-[3px] text-text-muted uppercase">
             Contact
           </span>
@@ -39,16 +39,16 @@ export function ContactSection() {
           className="mb-20"
         >
           <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-extralight leading-[1.15] tracking-tight">
-            함께 <span className="text-teal-accent">일하고</span> 싶으시다면
+            함께 <span className="text-teal-accent/70">일하고</span> 싶으시다면
             <br />
-            편하게 <span className="text-teal-accent">연락</span>주세요
+            편하게 <span className="text-teal-accent/70">연락</span>주세요
           </h2>
         </motion.div>
 
         {/* Animated line */}
         <motion.div
           style={{ width: lineWidth }}
-          className="mb-16 h-px bg-gradient-to-r from-teal-accent/50 via-teal-accent/20 to-transparent"
+          className="mb-16 h-px bg-gradient-to-r from-teal-accent/30 via-white/5 to-transparent"
         />
 
         {/* Contact grid */}
@@ -80,7 +80,7 @@ export function ContactSection() {
               transition={{ delay: i * 0.15 }}
               className="group"
             >
-              <p className="mb-3 text-[10px] tracking-[4px] text-teal-accent/60 uppercase">
+              <p className="mb-3 text-[10px] tracking-[4px] text-white/25 uppercase">
                 {item.label}
               </p>
               {item.href ? (

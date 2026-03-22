@@ -107,7 +107,7 @@ function ProjectCard({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-3xl font-extralight tracking-tight transition-colors duration-300 group-hover:text-teal-accent md:text-5xl"
+              className="text-3xl font-extralight tracking-tight transition-colors duration-300 group-hover:text-teal-accent/70 md:text-5xl"
             >
               {project.title}
             </motion.h3>
@@ -169,10 +169,10 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="mb-24 flex items-center gap-4"
         >
-          <span className="text-xs tracking-[3px] text-teal-accent uppercase">
+          <span className="text-xs tracking-[3px] text-white/30 uppercase">
             /02
           </span>
-          <div className="h-px w-8 bg-teal-accent/30" />
+          <div className="h-px w-8 bg-white/10" />
           <span className="text-xs tracking-[3px] text-text-muted uppercase">
             Selected Work
           </span>

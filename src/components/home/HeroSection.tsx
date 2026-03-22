@@ -39,7 +39,7 @@ export function HeroSection() {
       {/* Multiple gradient orbs */}
       <motion.div
         style={{ y: y1 }}
-        className="pointer-events-none absolute -top-20 right-[10%] h-[500px] w-[500px] rounded-full bg-teal-accent/[0.06] blur-[150px]"
+        className="pointer-events-none absolute -top-20 right-[10%] h-[500px] w-[500px] rounded-full bg-white/[0.03] blur-[150px]"
       />
       <motion.div
         style={{ y: y2 }}
@@ -69,9 +69,9 @@ export function HeroSection() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="h-px w-16 origin-left bg-teal-accent/50"
+              className="h-px w-16 origin-left bg-white/20"
             />
-            <span className="text-xs tracking-[6px] text-teal-accent uppercase">
+            <span className="text-xs tracking-[6px] text-white/40 uppercase">
               UX/UI Designer — Portfolio 2026
             </span>
           </motion.div>
@@ -94,7 +94,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["경", "험"].includes(char)
-                        ? "text-teal-accent font-light"
+                        ? "text-teal-accent/80 font-light"
                         : ""
                     }`}
                   >
@@ -116,7 +116,7 @@ export function HeroSection() {
                     }}
                     className={`inline-block ${
                       ["문", "제", "발", "견", "해", "결"].includes(char)
-                        ? "text-teal-accent font-light"
+                        ? "text-teal-accent/80 font-light"
                         : ""
                     }`}
                   >
@@ -165,7 +165,7 @@ export function HeroSection() {
           <span className="text-[10px] tracking-[3px] text-text-muted uppercase">
             Scroll
           </span>
-          <div className="h-12 w-px bg-gradient-to-b from-teal-accent/40 to-transparent" />
+          <div className="h-12 w-px bg-gradient-to-b from-white/20 to-transparent" />
         </motion.div>
       </motion.div>
     </section>

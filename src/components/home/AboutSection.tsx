@@ -23,10 +23,10 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="mb-6 flex items-center gap-4"
             >
-              <span className="text-xs tracking-[3px] text-teal-accent uppercase">
+              <span className="text-xs tracking-[3px] text-white/30 uppercase">
                 /01
               </span>
-              <div className="h-px w-8 bg-teal-accent/30" />
+              <div className="h-px w-8 bg-white/10" />
               <span className="text-xs tracking-[3px] text-text-muted uppercase">
                 About
               </span>
@@ -67,16 +67,16 @@ export function AboutSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative flex flex-col gap-4 border-b border-white/[0.06] p-8 transition-colors hover:bg-white/[0.03] md:border-b-0 md:border-r last:border-r-0 last:border-b-0"
             >
-              <span className="text-[10px] tracking-widest text-teal-accent/60">
+              <span className="text-[10px] tracking-widest text-white/20">
                 {step.num}
               </span>
-              <h3 className="text-lg font-light text-text-primary transition-colors group-hover:text-teal-accent">
+              <h3 className="text-lg font-light text-text-primary transition-colors group-hover:text-white">
                 {step.title}
               </h3>
               <p className="text-xs text-text-muted">{step.desc}</p>
 
               {/* Hover line */}
-              <div className="absolute bottom-0 left-0 h-px w-0 bg-teal-accent/50 transition-all duration-500 group-hover:w-full md:bottom-auto md:top-0" />
+              <div className="absolute bottom-0 left-0 h-px w-0 bg-teal-accent/40 transition-all duration-500 group-hover:w-full md:bottom-auto md:top-0" />
             </motion.div>
           ))}
         </div>

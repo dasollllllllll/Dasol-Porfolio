@@ -9,7 +9,7 @@ export function Footer() {
           href="https://www.instagram.com/sol_.tudio"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-text-muted tracking-wider transition-colors hover:text-teal-accent"
+          className="text-xs text-text-muted tracking-wider transition-colors hover:text-white/70"
         >
           Instagram
         </a>

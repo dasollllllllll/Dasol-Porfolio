@@ -48,7 +48,7 @@ export function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
           <Link
             href="/"
-            className="text-sm font-medium tracking-[3px] text-text-primary uppercase hover:text-teal-accent transition-colors"
+            className="text-sm font-medium tracking-[3px] text-text-primary uppercase hover:text-white/80 transition-colors"
           >
             Dasol Park
           </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-2xl font-extralight tracking-widest text-text-primary uppercase hover:text-teal-accent transition-colors"
+                  className="text-2xl font-extralight tracking-widest text-text-primary uppercase hover:text-white/80 transition-colors"
                 >
                   {item.label}
                 </motion.button>
