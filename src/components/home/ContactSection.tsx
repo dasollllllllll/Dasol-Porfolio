@@ -56,8 +56,8 @@ export function ContactSection() {
           {[
             {
               label: "Email",
-              value: "contact@example.com",
-              href: "mailto:contact@example.com",
+              value: "dasoll9613@gmail.com",
+              href: "mailto:dasoll9613@gmail.com",
               note: "TODO: 실제 이메일",
             },
             {

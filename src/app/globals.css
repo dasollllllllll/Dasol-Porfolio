@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-primary: #0a0a0a;
-  --color-bg-secondary: #141414;
-  --color-bg-card: #141414;
+  --color-bg-primary: #0c1220;
+  --color-bg-secondary: #151f30;
+  --color-bg-card: #151f30;
   --color-teal-accent: #00adb5;
   --color-teal-light: rgba(0, 173, 181, 0.1);
   --color-teal-glow: rgba(0, 173, 181, 0.2);
